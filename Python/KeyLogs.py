@@ -5,7 +5,6 @@ from datetime import datetime
 count = 0
 keys = []
 
-
 # Define a keystroke 
 def keystroke(key):
     global keys, count
