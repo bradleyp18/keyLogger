@@ -5,7 +5,7 @@ from datetime import date
 
 
 username = "fsattacker247@gmail.com"
-password = "FS123456789"
+password = ""
 
 mail = imaplib.IMAP4_SSL("imap.gmail.com")
 mail.login(username, password)

