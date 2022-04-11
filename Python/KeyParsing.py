@@ -16,6 +16,6 @@ with open (log_file, "r") as file:
     for i in range(len(data)):
         for char in data[i]:
             if char in numList:
-                print(f"POSSIBLE PW: {data[i]}")
+                print (f"POSSIBLE PW: {data[i]}")
                 for n in range(1,trail + 1):
                     print (f"n - {n}", data[i - n])           

