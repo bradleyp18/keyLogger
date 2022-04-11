@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*-coding:Latin-1 -*
+
+
 import keyboard
 import smtplib
 from threading import Timer

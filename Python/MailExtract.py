@@ -29,7 +29,7 @@ for log in inbox_item:
 
 ### PART II ###
 # Create Key Parser
-log_file = "C:/Users/bradl/OneDrive/Folder/Git/log.txt"
+log_file = "log.txt"
 
 trail = 3
 
