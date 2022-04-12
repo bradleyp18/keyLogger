@@ -1,4 +1,0 @@
-login tec<BACKSPACE>44:['login', 'FS<SHIFT>team', 'M<SHIFT>ypassword']
-1234:['M<SHIFT>ypassword', 'login tec<BACKSPACE>44', 'neel']
-tek44:['login tec<BACKSPACE>44', 'neel', '1234']
-l1234:['neel', '1234', 'tek44']
