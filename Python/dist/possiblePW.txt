@@ -1,3 +1,8 @@
 office 365 logo:['', '', '']
 FS<RIGHT_SHIFT>123456789:['<DELETE><DELETE><DELETE><DELETE>I<SHIFT>f you wish to conte using this account please upgrade to our services.', 'I<SHIFT>t<BACKSPACE>gnoring this message wilause your account to be closed.', 'gmail.com']
 nikelover1234@<RIGHT_SHIFT>gmail.com<TAB>gabooatooga1!<RIGHT_SHIFT>:['gmail.com', 'FS<RIGHT_SHIFT>123456789', 'nike.com']
+fullstack123456:['how <BACKSPACE>gol<BACKSPACE>gle images', 'i see how this workd<BACKSPACE>s', 'login']
+target247fs:['nike.com', 'gm', 'tar46<BACKSPACE>7FS<RIGHT_SHIFT>']
+fs123456789:['login', 'fullstack123456', 'target247fs']
+FS<SHIFT>16789:['fullstack123456', 'target247fs', 'fs123456789']
+tar46<BACKSPACE>7FS<RIGHT_SHIFT>:['FS<SHIFT>16789', 'nike.com', 'gm']
